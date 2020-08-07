@@ -1,22 +1,23 @@
 # frozen_string_literal: true
 
 class QuestionsController < ActionController::Base
-  PERIODS = %w(LAST_YEAR LAST_MONTH LAST_WEEK LAST_DAY)
   attr_reader :service
 
   def index
-    @questions = PERIODS
+    @questions_ranges = Question.ranges
   end
 
   def show
+    ranges = Question.ranges
+
     case questions_params[:choice]
-    when PERIODS[0]
+    when ranges[0]
       accessed_last_year
-    when PERIODS[1]
+    when ranges[1]
       accessed_last_month
-    when PERIODS[2]
+    when ranges[2]
       accessed_last_week
-    when PERIODS[3]
+    when ranges[3]
       accessed_last_day
     else
       redirect_to :root, alert: 'Error unknown'
