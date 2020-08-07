@@ -1,4 +1,4 @@
-v1.0
+v1.1
 ## CHANGELOG
 ### Features
 - Adicionado spec para realizar consultas das questões mais acessadas.
