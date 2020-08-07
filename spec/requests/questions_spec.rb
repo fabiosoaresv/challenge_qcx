@@ -16,8 +16,8 @@ RSpec.describe 'GET questions', type: :request do
     expect(request).to eq(200)
   end
 
-  it "make request to accessed_24_hours and return 200" do
-    request = get '/accessed_24_hours'
+  it "make request to accessed_last_day and return 200" do
+    request = get '/accessed_last_day'
     expect(request).to eq(200)
   end
 end
