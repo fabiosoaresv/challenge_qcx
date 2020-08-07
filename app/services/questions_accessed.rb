@@ -17,7 +17,7 @@ class QuestionsAccessed
     accessed_date(1.week)
   end
 
-  def accessed_24_hours
+  def accessed_last_day
     accessed_date(24.hours)
   end
 
