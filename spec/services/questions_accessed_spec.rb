@@ -31,8 +31,8 @@ RSpec.describe QuestionsAccessed do
   describe '#accessed_last_week' do
     let!(:subject) { QuestionsAccessed.new }
     context 'when you want to know what questions more accessed' do
-      it 'in last 24 hours and return' do
-        expect(subject.accessed_24_hours).to eq('Literatura')
+      it 'in last day and return' do
+        expect(subject.accessed_last_day).to eq('Literatura')
       end
     end
   end
