@@ -6,7 +6,7 @@
       <%= label_tag :system, 'Questions in' %>
       <%= select_tag(
         'params[choice]',
-        options_for_select(@questions),
+        options_for_select(@questions_ranges),
         prompt: 'select a range date',
         class: 'form-control type_select'
       ) %>
