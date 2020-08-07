@@ -31,7 +31,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rest-client'
   gem 'rspec-rails', '~> 4.0.1'
-  gem 'pg'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
