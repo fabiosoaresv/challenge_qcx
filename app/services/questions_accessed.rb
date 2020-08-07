@@ -45,7 +45,9 @@ class QuestionsAccessed
       question['id'] == more_accessed['question_id']
     end
 
+    # TODO - validate issue #8
     get_discipline&.first['discipline']&.capitalize if get_discipline
+    # ENDTODO
   end
 
   def get_last_date
