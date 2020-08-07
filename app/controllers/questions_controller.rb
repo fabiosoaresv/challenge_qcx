@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class QuestionsController < ActionController::Base
-  PERIODS = %w(LAST_YEAR LAST_MONTH LAST_WEEK LAST_24_YOURS)
+  PERIODS = %w(LAST_YEAR LAST_MONTH LAST_WEEK LAST_DAY)
   attr_reader :service
 
   def index
@@ -17,7 +17,7 @@ class QuestionsController < ActionController::Base
     when PERIODS[2]
       accessed_last_week
     when PERIODS[3]
-      accessed_24_hours
+      accessed_last_day
     else
       redirect_to :root, alert: 'Error unknown'
     end
@@ -36,8 +36,8 @@ class QuestionsController < ActionController::Base
     render(json: { data: service.accessed_last_week } )
   end
 
-  def accessed_24_hours
-    render(json: { data: service.accessed_24_hours } )
+  def accessed_last_day
+    render(json: { data: service.accessed_last_day } )
   end
 
   private
