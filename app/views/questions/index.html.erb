@@ -1,0 +1,19 @@
+<div class="container">
+  <%= form_tag questions_show_path, method: :get do %>
+    <h1 class='display-4 my-5'>What do you want know?</h1>
+    <hr>
+    <div class="form-group">
+      <%= label_tag :system, 'Questions in' %>
+      <%= select_tag(
+        'params[choice]',
+        options_for_select(@questions),
+        prompt: 'select a range date',
+        class: 'form-control type_select'
+      ) %>
+    </div>
+
+    <div class="actions">
+      <%= submit_tag 'Confirmar', class: 'btn btn-block btn-primary' %>
+    </div>
+  <% end %>
+</div>
