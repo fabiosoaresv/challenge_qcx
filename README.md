@@ -20,7 +20,7 @@ Mais acessadas por periodo: Listar as questões mais acessadas por semana/mês/a
 - Git
 
 ### Arquitetura do projeto
-O projeto foi divido com a lógica principal centralizada em [Service](https://github.com/fabiosoaresv/challenge_qcx/blob/master/app/services/questions_accessed.rb), para poder ser utilizado o Rest-Client para objter o json no repo da @qcx.
+O projeto foi divido com a lógica principal centralizada no [Service](https://github.com/fabiosoaresv/challenge_qcx/blob/master/app/services/questions_accessed.rb), para poder ser utilizado o Rest-Client para obter o json via API no repo da @qcx.
 
 Em seguida, a lógica necessária foi extraída para os métodos privados, para se obter as disciplinas mais acessadas de acordo com os ranges (24 horas, semana, mês, ano).
 
