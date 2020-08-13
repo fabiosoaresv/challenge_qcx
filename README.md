@@ -28,8 +28,10 @@ Em seguida, a lógica necessária foi extraída para os métodos privados, para 
 ```console
 $ git clone https://github.com/fabiosoaresv/challenge_qcx.git
 $ cd challenge_qcx/
+$ gem install bundler
 $ bundle install
 # NOTE: run with RAILS_ENV=test or RAILS_ENV=development
+# NOTE2: change database.yml configuration
 $ bundle exec rake db:create db:migrate db:seed
 ```
 
